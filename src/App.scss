@@ -1,22 +1,162 @@
-.App {
-  text-align: center;
+
+
+
+//colors
+
+$color-primary: #2980b9;
+$color-primary-light: #5ca9db;
+$color-primary-dark: #1a5073;
+
+$color-secondary: #f1c40f;
+$color-secondary-light: #f6d85f;
+$color-secondary-dark: #a28309;
+
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+
+
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-white: #fff;
+$color-black: #000;
+
+//utilities
+
+.top-margin-small {
+  margin-top: 3rem;
 }
 
-.App-logo {
-  height: 40vmin;
+.top-margin-medium {
+  margin-top: 6rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.nav-bar {
+  background-color: $color-primary;
+  color: $color-white;
+  height: 5rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+
+  &__logo {
+    font-size: 2.5rem;
+    padding: .5rem;
+  }
+
+  &__link {
+    color: inherit;
+    font-size: 1.6rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: .5rem;
+
+    &:hover {
+      color: $color-secondary-light;
+    }
+  }
 }
 
-.App-link {
-  color: #09d3ac;
+.hero {
+  height: 75vh;
+  background-position: center 70%;
+  background-image: 
+      radial-gradient(
+          circle at 50%,
+          rgba($color-black, 0.6),
+          rgba($color-black, 0.6)),
+      url(/car-hood.jpg);
+  background-size: cover;
+  color: $color-white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  &__heading {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 4rem;
+    letter-spacing: 2rem;
+  }
+}
+
+.btn {
+
+  &:link,
+  &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1.5rem 4rem;
+      display: inline-block;
+      border-radius: 10rem;
+      transition: all .2s;
+      position: relative;
+      font-size: 2rem;
+      width: 30%;
+  }
+
+  &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+      
+      &::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+      }
+  }
+
+  &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 .5rem 1rem rgba($color-black, 0.2);
+  }
+
+  &--yellow {
+    background-color: $color-secondary;
+    color: $color-primary-dark;
+    &::after {
+        background-color: $color-secondary;
+    }
+  }
+}
+
+.services-section {
+  text-align: center;
+
+  &__services-row {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+.heading-secondary {
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: $color-grey-dark;
+  font-weight: 300;
+}
+
+.service-card {
+  background-color: rgba($color-white, .8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: transform .3s;
+
+
+
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: 5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+    }
 }
