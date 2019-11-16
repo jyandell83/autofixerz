@@ -160,3 +160,48 @@ $color-black: #000;
         transform: translateY(-1.5rem) scale(1.03);
     }
 }
+
+.stories-section {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story {
+  background-size: cover;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+  height: 25rem;
+  p {
+    text-align: left;
+    padding: 3rem;
+  }
+  
+  &1 {
+    background-image: linear-gradient(105deg,
+                                        rgba($color-white, .9) 0%,
+                                        rgba($color-white, .9) 50%,
+                                        transparent 50%), url(/neonbrand-2K_-PG95qlI-unsplash.jpg);
+    background-position: top right;
+  }
+
+  &2 {
+    background-image: linear-gradient(105deg,
+                                        transparent 50%,
+                                        rgba($color-white, .9) 0%,
+                                        rgba($color-white, .9) 50%,
+                                        ), url(/hosea-georgeson-ac1-FGch-E0-unsplash.jpg);
+
+    background-position: bottom;
+  }
+
+  &3 {
+    background-image: linear-gradient(105deg,
+                                        rgba($color-white, .9) 0%,
+                                        rgba($color-white, .9) 50%,
+                                        transparent 50%), url(/tim-mossholder-V37iTrYZz2E-unsplash.jpg);
+    background-position: top;
+                      
+  }
+
+}

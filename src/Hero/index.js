@@ -4,11 +4,11 @@ const Hero = () =>  {
     return(
         <div className="hero">
             <h1 className="hero__heading">
-                Our Mechanics come to you.
+                The Mechanic comes to you.
             </h1>
             <div>
                 <a href="#" className="btn btn--yellow top-margin-small">
-                    Get an Estimate
+                    Fix my car
                 </a>
             </div>
             
