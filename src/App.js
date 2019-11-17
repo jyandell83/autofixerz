@@ -21,7 +21,7 @@ const App = () => {
       <Switch>
             <Route exact path = '/' render = { () => <Home /> } />
             <Route exact path = '/book' render = { () => <Book dispatch={dispatch} /> } />
-            <Route exact path = '/service' render = { () => <Routine Routine={state.chosenWork}/> } />
+            <Route exact path = '/service' render = { () => <Routine Routine={state.chosenWork} location={state.location} dispatch={dispatch}/> } />
       </Switch>
     </div>
   );

@@ -1,11 +1,35 @@
 import React from 'react';
+import { types } from '../settings';
 
 
-const Routine = ({Routine}) => {
+const locations = [
+    'Los Angeles',
+    'San Francisco',
+    'San Diego'
+]
+
+const Routine = ({Routine, location, dispatch}) => {
     
     return (
       <div className="Routine">
-        {Routine}
+        {Routine}{location}
+        <select
+            onChange={(e) => dispatch({
+                type: types.changeLocation,
+                payload: e.target.value
+            })}
+        >
+            {
+                locations.map((loc) =>
+                    <option
+                        key={loc}
+                        
+                    >
+                        {loc}
+                    </option>
+                )
+            }
+        </select>
       </div>
     );
   }
