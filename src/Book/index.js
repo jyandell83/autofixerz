@@ -1,11 +1,19 @@
 import React from 'react';
+import { types } from '../settings';
+import { Link } from 'react-router-dom'
+
+const services = [
+    'Oil Change',
+    'Change Battery',
+    'Fix a Flat',
+    'Tire Rotation',
+    'Tune Up',
+    'Dent Repair'
+]
 
 
 
-
-
-
-function Book() {
+function Book({dispatch}) {
     return (
       <div className="Book">
         <h1 className="heading-primary top-margin-small">
@@ -18,13 +26,18 @@ function Book() {
             Routine Maintenance
         </h1>
         <ul className="top-margin-small">
-            <li>Oil Change &rarr;</li>
-            <li>Change Battery &rarr;</li>
-            <li>Fix a Flat &rarr;</li>
-            <li>Tire Rotation &rarr;</li>
-            <li>Tune Up &rarr;</li>
-            <li>Check Fluids &rarr;</li>
-            <li>Dent Repair &rarr;</li>
+            {
+                services.map((service) =>
+                    <li
+                        key={service}
+                        onClick={() => dispatch({
+                            type: types.changeChosenWork,
+                            payload: service
+                        })}
+                    ><Link to='/service'>{service}</Link>
+                    </li>
+                )
+            }
         </ul>
       </div>
     );
