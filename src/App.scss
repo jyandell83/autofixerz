@@ -1,4 +1,7 @@
-
+.App {
+  position: relative;
+  min-height: 100vh;
+}
 
 
 //colors
@@ -207,5 +210,32 @@ $color-black: #000;
 }
 
 .Book {
+  text-align: center;
+}
+
+.footer {
+  height: 5rem;
+  background-color: $color-primary-dark;
+  color: $color-white;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  &__nav {
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+.content-wrap {
+  padding-bottom: 15rem;
+}
+
+.copyright{
+  border-top: 1px solid $color-secondary-light;
   text-align: center;
 }

@@ -12,7 +12,7 @@ const Routine = ({Routine, location, dispatch}) => {
     
     return (
       <div className="Routine">
-        {Routine}{location}
+        {Routine} in {location}
         <select
             onChange={(e) => dispatch({
                 type: types.changeLocation,

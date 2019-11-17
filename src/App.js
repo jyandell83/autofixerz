@@ -9,7 +9,8 @@ import { initialState, reducer} from './settings'
 import Nav from './Nav';
 import Home from './Home';
 import Book from './Book';
-import Routine from './Routine'
+import Routine from './Routine';
+import Footer from './Footer';
 
 
 const App = () => {
@@ -17,12 +18,15 @@ const App = () => {
   
   return (
     <div className="App">
+      <div className="content-wrap">
       <Nav />
       <Switch>
             <Route exact path = '/' render = { () => <Home /> } />
             <Route exact path = '/book' render = { () => <Book dispatch={dispatch} /> } />
             <Route exact path = '/service' render = { () => <Routine Routine={state.chosenWork} location={state.location} dispatch={dispatch}/> } />
       </Switch>
+      <Footer />
+      </div>
     </div>
   );
 }
