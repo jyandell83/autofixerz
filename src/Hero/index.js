@@ -7,7 +7,7 @@ const Hero = () =>  {
                 The Mechanic comes to you.
             </h1>
             <div>
-                <a href="#" className="btn btn--yellow top-margin-small">
+                <a href="/repair" className="btn btn--yellow top-margin-small">
                     Fix my car
                 </a>
             </div>
