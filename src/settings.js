@@ -5,7 +5,7 @@ export const types = {
 
 export const initialState = {
     chosenWork: 'Oil Change',
-    location: 'Los Angeles',
+    location: 'East LA',
 }
 
 export const reducer = (state = initialState, action) =>  {
