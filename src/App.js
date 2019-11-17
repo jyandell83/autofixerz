@@ -6,16 +6,17 @@ import { withRouter } from "react-router";
 
 //components
 import Nav from './Nav';
-import Home from './Home'
+import Home from './Home';
+import Book from './Book';
 
 
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Nav />
       <Switch>
             <Route exact path = '/' render = { () => <Home /> } />
-            <Route exact path = '/repair' render = { () => <div>repair</div> } />
+            <Route exact path = '/book' render = { () => <Book /> } />
       </Switch>
     </div>
   );
