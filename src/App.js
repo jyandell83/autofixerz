@@ -1,8 +1,9 @@
-import React, { useReducer } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.scss';
 import { withRouter } from "react-router";
 import { initialState, reducer } from './settings'
+import database from './Firebase/firebase'
 
 
 //components
@@ -17,7 +18,13 @@ import Login from './Login';
 
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
-  
+  useEffect(() => {
+    database.ref().set({
+      "name": "Daniel Scott"
+    })
+    .then(() => console.log('Data Written Successfully'))
+    .catch((error) => console.log('Firebase Error ', error))
+  });
   return (
     <div className="App">
       <div className="content-wrap">
