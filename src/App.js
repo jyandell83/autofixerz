@@ -19,8 +19,8 @@ import Login from './Login';
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   useEffect(() => {
-    database.ref().set({
-      "name": "Daniel Scott"
+    database.ref('users').set({
+      "name": "Jeremy"
     })
     .then(() => console.log('Data Written Successfully'))
     .catch((error) => console.log('Firebase Error ', error))
